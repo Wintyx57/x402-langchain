@@ -46,3 +46,14 @@ markers = [
     "unit: Unit tests",
     "integration: Integration tests",
 ]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
