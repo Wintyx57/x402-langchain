@@ -84,7 +84,7 @@ result = executor.invoke({"input": "What's the weather in Tokyo?"})
 |-------|----|----------|
 | Base Mainnet | `base` | ~$0.001 |
 | Base Sepolia (testnet) | `base-sepolia` | Free |
-| SKALE Europa | `skale` | Free (sFUEL) |
+| SKALE on Base | `skale` | ~$0.0007 (CREDITS) |
 
 ### Budget Control
 
