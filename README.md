@@ -2,7 +2,7 @@
 
 LangChain tools for [x402 Bazaar](https://x402bazaar.org) -- the AI agent API marketplace with native USDC payments.
 
-Build autonomous AI agents that can search the web, scrape pages, check weather, get crypto prices, and more -- all paid automatically with USDC on Base or SKALE.
+Build autonomous AI agents that can search the web, scrape pages, check weather, get crypto prices, and more -- all paid automatically with USDC on Base, SKALE, or Polygon.
 
 ## Installation
 
@@ -29,7 +29,7 @@ from x402_langchain import X402Client
 
 client = X402Client(
     private_key="0xYOUR_PRIVATE_KEY",
-    chain="base",           # "base", "base-sepolia", or "skale"
+    chain="base",           # "base", "base-sepolia", "skale", or "polygon"
     max_budget_usdc=1.0,    # Safety cap
 )
 
@@ -85,6 +85,7 @@ result = executor.invoke({"input": "What's the weather in Tokyo?"})
 | Base Mainnet | `base` | ~$0.001 |
 | Base Sepolia (testnet) | `base-sepolia` | Free |
 | SKALE on Base | `skale` | ~$0.0007 (CREDITS) |
+| Polygon Mainnet | `polygon` | ~$0.001 (MATIC) |
 
 ### Budget Control
 
@@ -172,7 +173,7 @@ Methods: `pay()`, `get_balance()`
 
 | Repository | Description |
 |---|---|
-| **[x402-backend](https://github.com/Wintyx57/x402-backend)** | API server, 69 native endpoints, payment middleware, MCP server |
+| **[x402-backend](https://github.com/Wintyx57/x402-backend)** | API server, 74 native endpoints, payment middleware, MCP server |
 | **[x402-frontend](https://github.com/Wintyx57/x402-frontend)** | React + TypeScript UI, wallet connect |
 | **[x402-bazaar-cli](https://github.com/Wintyx57/x402-bazaar-cli)** | `npx x402-bazaar` -- CLI with 7 commands |
 | **[x402-sdk](https://github.com/Wintyx57/x402-sdk)** | TypeScript SDK for AI agents |
